@@ -252,3 +252,32 @@
             width: 100%;
             margin-bottom: 15px;;
         }
+
+
+
+
+/*ia*/
+
+.botonIA {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    color: white;
+    background-color: #194596;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonIA:hover {
+    background-color: #709beb;
+}
