@@ -31,7 +31,7 @@ function loginUser() {
     if (name === savedName && pass === savedPass) {
         showMessage('Inicio de sesión exitoso. Redirigiendo...');
         setTimeout(() => {
-            window.location.href = 'dashboardx.html';
+            window.location.href = 'templates/dashboard.html';
         }, 2000);
     } else {
         showMessage('Correo o contraseña incorrectos.', true);

@@ -40,11 +40,12 @@ function saveName() {
 
     localStorage.setItem('userName', correo);
     localStorage.setItem('Password', contraseña);
-    showMessage('Se ha creado la cuenta con éxito. Redirigiendo...', false);
+    showMessage('Se ha creado la cuenta con éxito...', false);
+    setTimeout (() => {
+        window.location.href = '../index.html';
+    }, 3000);
 
-    setTimeout(() => {
-        window.location.href = 'dashboard.html';
-    }, 2000);
+
 
     nameInput.value = '';
     contraseñaInput.value = '';

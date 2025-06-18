@@ -1,5 +1,14 @@
 
 console.log('ingresando al js')
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('btnAgregarp');
+    if (btn) {
+        btn.addEventListener('click', () => {
+            console.log('Botón clickeado');
+            crearProducto(); // Asegúrate que esta función esté en el mismo archivo
+        });
+    }
+});
 function crearProducto() {
     const nombreInput = document.getElementById('nombre');
     const tipoInput = document.getElementById('tipo');
