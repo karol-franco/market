@@ -8,9 +8,9 @@ botonIA.addEventListener('click', () => {
     modal.innerHTML = `
       <div style="background: white; padding: 20px; border-radius: 10px;">
         <button id="cerrarModal" style="float: right; background: transparent; border: none; font-size: 18px;">✖</button>
-        <h2>Sugeridor IA de precios</h2>
+        
         <label for="productoInput">Escribe el nombre del producto:</label>
-        <input type="text" id="productoInput" placeholder="Ej: Camiseta deportiva" style="width: 100%; padding: 8px; margin-top: 5px;"/>
+        <input type="text" id="productoInput" placeholder="Ej: panela" style="width: 100%; padding: 8px; margin-top: 5px;"/>
         <button id="consultarBtn" style="margin-top: 10px;">Consultar precio</button>
         <pre id="respuestaIA" style="margin-top: 15px; white-space: pre-wrap;"></pre>
       </div>
