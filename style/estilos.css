@@ -281,3 +281,40 @@
 .botonIA:hover {
     background-color: #709beb;
 }
+
+
+/* modales de ia */
+
+#modalIA {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#modalIA > div {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  max-width: 90%;
+  position: relative;
+}
+
+#cerrarModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
