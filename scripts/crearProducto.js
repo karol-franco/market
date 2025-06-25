@@ -17,9 +17,7 @@ function crearProducto() {
     const precio = document.getElementById('precio').value.trim();
     const imgInput = document.getElementById('imgp');
     const imgFile = imgInput.files[0];
-    const contenedor = document.getElementById('seccionProductos');
 
-    // Validar campos
     if (!nombre || !tipo || !descripcion || !precio || !imgFile) {
         alert('Por favor, llene todos los campos requeridos.');
         return;
@@ -30,34 +28,25 @@ function crearProducto() {
     reader.onload = function (e) {
         const urlImagen = e.target.result;
 
-        const productoHTML = `
-            <div class="producto">
-                <img src="${urlImagen}" alt="Imagen del producto" style="width:100px">
-                <h3>${nombre}</h3>
-                <p><strong>Tipo:</strong> ${tipo}</p>
-                <p>${descripcion}</p>
-                <p><strong>Precio:</strong> $${precio}</p>
-            </div>
-        `;
+        const nuevoProducto = {
+            nombre,
+            tipo,
+            descripcion,
+            precio,
+            imagen: urlImagen
+        };
 
-        contenedor.insertAdjacentHTML('beforeend', productoHTML);
-        window.location.href('productos.html')
+        // Obtener productos actuales o iniciar vacío
+        const productosGuardados = JSON.parse(localStorage.getItem('productos')) || [];
 
-        // Guardar en localStorage
-        localStorage.setItem('nombre producto', nombre);
-        localStorage.setItem('Valor', precio);
-        localStorage.setItem('Categoria', tipo);
-        localStorage.setItem('Imagen', urlImagen);
-          if (productoHTML) {
-            contenedor.innerHTML = productoHTML;
-        }
+        // Agregar nuevo producto
+        productosGuardados.push(nuevoProducto);
 
-        // Limpiar formulario
-        document.getElementById('nombre').value = '';
-        document.getElementById('tipo').value = '';
-        document.getElementById('descripcion').value = '';
-        document.getElementById('precio').value = '';
-        imgInput.value = '';
+        // Guardar de nuevo
+        localStorage.setItem('productos', JSON.stringify(productosGuardados));
+
+        // Redirigir a productos.html
+        window.location.href = 'productos.html';
     };
 
     reader.readAsDataURL(imgFile);
