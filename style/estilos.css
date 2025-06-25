@@ -6,7 +6,7 @@
     }
         body {
             font-family: Arial, sans-serif;
-            background-color: #2980b9;
+            background-color: #184f74;
             color: #333;
         }
         nav{
@@ -36,7 +36,7 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            color: #156335;
+            color: #184f74;
         }
         .cont-boton{
             align-items: center;
