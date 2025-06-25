@@ -16,12 +16,28 @@
                 <a href="crearProducto.html"><button class="btnCrearProducto">Crear Producto</button></a>
             </div>
     </nav>
+    <section class="cont-productosGuardados">
+        <div id="seccionProductos"></div>
 
-     <button class="botonIA">🤖</button>
+
+    </section>
+
+
+    
+    <button class="botonIA">🤖</button>
 
    
     
 </body>
+    <script>
+        const contenedor = document.getElementById("contenedor-producto");
+        const productoHTML = localStorage.getItem("productoHTML");
+
+        if (productoHTML) {
+            contenedor.innerHTML = productoHTML;
+        }
+    </script>
 
     <script type="module" src="../scripts/inteligenciArtificial.js"></script>
+    <script type="module" src="/scripts/crearProducto.js"></script>
 </html>
