@@ -25,6 +25,19 @@
             font-size: 2em;
 
         }
+
+         .titulod img{
+            height: 70px;
+            width: 70px;
+            
+        }
+
+        .titulod a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #156335;
+        }
         .cont-boton{
             align-items: center;
             display: flex;
