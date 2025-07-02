@@ -15,6 +15,7 @@ function crearProducto() {
     const tipo = document.getElementById('tipo').value.trim();
     const descripcion = document.getElementById('descripcion').value.trim();
     const precio = document.getElementById('precio').value.trim();
+    const Inputcantidad = document.getElementById('cantidad').value.trim();
     const imgInput = document.getElementById('imgp');
     const imgFile = imgInput.files[0];
 
@@ -33,6 +34,7 @@ function crearProducto() {
             tipo,
             descripcion,
             precio,
+            Inputcantidad,
             imagen: urlImagen
         };
 
