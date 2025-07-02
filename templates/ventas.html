@@ -3,22 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ventas - EcoMarket</title>
+  <title>Ventas</title>
   <link rel="stylesheet" href="../style/estilos.css" />
 </head>
 <body>
 
-  <section>
-    <nav>
-      <ul>
-        <li class="titulod">
-          <img src="../assets/img/zanahoriaaaaa.jpg" alt=""> EcoMarket
-        </li>
-      </ul>
-      <div class="cont-boton">
-        <a href="index.html"><button class="boton-login">Inicio</button></a>
-        
-      </div>
+   <nav>
+        <ul>
+            <li class="titulod"><a href="../templates/dashboard.html"><img src="../assets/img/zanahoriaaaaa.jpg" alt=""> Market</a></li>
+        </ul>
+        <div class="cont-boton">
+            <a href="../index.html"><button class="boton-login">Salir</button></a>
+        </div>
     </nav>
 
     
@@ -51,10 +47,10 @@
 
             
             <div class="acciones">
-              <button onclick="limpiarVenta()">🗑 Limpiar venta</button>
+              <button onclick="limpiarVenta()"> Limpiar venta</button>
               <button onclick="pagoCredito()">💳 Pago a crédito</button>
               <button onclick="pagoContado()">💵 Pago de contado</button>
-              <button onclick="ventaTemporal()">⏸ Venta temporal</button>
+              <button onclick="ventaTemporal()"> Venta temporal</button>
             </div>
           </div>
         </div>
@@ -65,3 +61,4 @@
   <script src="../scripts/ventas.js"></script>
 </body>
 </html>
+
