@@ -9,7 +9,7 @@
 <body>
     <nav>
         <ul>
-            <li class="titulod"><a href="../templates/dashboard.html"><img src="../assets/img/zanahoriaaaaa.jpg" alt=""> Market</a></li>
+            <li>EcoMarket</li>
         </ul>                
         <div class="cont-boton">
             <a href="/index.html"><button class="boton-login">Salir</button></a>
@@ -30,12 +30,13 @@
             if (productos.length > 0) {
                 productos.forEach(producto => {
                     const productoHTML = `
-                        <div class="producto" style="border: 1px solid #ccc; padding: 10px; border-radius: 10px; width: 200px;">
+                        <div class="producto" style="border: 1px solid #ccc;background-color: #fff ; padding: 10px; border-radius: 10px; width: 200px;">
                             <img src="${producto.imagen}" alt="Imagen del producto" style="width:100%; border-radius: 5px;">
                             <h3>${producto.nombre}</h3>
                             <p><strong>Tipo:</strong> ${producto.tipo}</p>
                             <p>${producto.descripcion}</p>
                             <p><strong>Precio:</strong> $${producto.precio}</p>
+                            <p><strong>Cantidad:</strong> $${producto.Inputcantidad}</p>
                         </div>
                     `;
                     contenedor.insertAdjacentHTML("beforeend", productoHTML);
@@ -46,6 +47,7 @@
         });
     </script>
 
-    <script type="module" src="../scripts/inteligenciArtificial.js"></script>
+    <script type="module" src="../scripts/inteligenciaArtificial.js"></script>
 </body>
 </html>
+
