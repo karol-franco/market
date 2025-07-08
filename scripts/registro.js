@@ -42,7 +42,7 @@ function saveName() {
     localStorage.setItem('Password', contraseña);
     showMessage('Se ha creado la cuenta con éxito...', false);
     setTimeout (() => {
-        window.location.href = '../demo.html';
+        window.location.href = './demo.html';
     }, 3000);
 
 
@@ -65,6 +65,6 @@ function displaySavedName() {
 
 botonCuenta.addEventListener('click', saveName);
 
-// Mostrar nombre al cargar
+
 document.addEventListener('DOMContentLoaded', displaySavedName);
 document.getElementById("nameInput").textContent = nameInput;
